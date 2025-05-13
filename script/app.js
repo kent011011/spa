@@ -1,4 +1,4 @@
 Alpine.store("settings", {
-  apiBaseUrl: "http://172.17.100.14:3338/sagusay5/api/",
+  apiBaseUrl: "http://172.17.100.14:3362/edulzura1/api/",
   appName: "Electronic store",
 });

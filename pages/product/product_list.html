@@ -462,7 +462,7 @@
       this.message = "Loading products...";
       this.messageType = "blue";
 
-      const url = new URL("http://172.17.100.14:3338/sagusay5/api/products/");
+      const url = new URL("http://172.17.100.14:3362/edulzura1/api/products/");
 
       while (retries > 0) {
         try {
@@ -519,7 +519,7 @@
       try {
         const updatedStock = product.stock - 1;
         const stockResponse = await Alpine.store("api").fetch(
-          `http://172.17.100.14:3338/sagusay5/api/products/${product.id}/`,
+          `http://172.17.100.14:3362/edulzura1/api/products/${product.id}/`,
           {
             method: "PATCH",
             body: JSON.stringify({ stock: updatedStock }),
@@ -544,7 +544,7 @@
         }
 
         const cartResponse = await Alpine.store("api").fetch(
-          `http://172.17.100.14:3338/sagusay5/api/cart-items/`,
+          `http://172.17.100.14:3362/edulzura1/api/cart-items/`,
           {
             method: "POST",
             body: formData,
@@ -624,7 +624,7 @@
         try {
           const updatedStock = product.stock + newStock;
           const response = await Alpine.store("api").fetch(
-            `http://172.17.100.14:3338/sagusay5/api/products/${product.id}/`,
+            `http://172.17.100.14:3362/edulzura1/api/products/${product.id}/`,
             {
               method: "PATCH",
               body: JSON.stringify({ stock: updatedStock }),
@@ -675,7 +675,7 @@
       while (retries > 0) {
         try {
           const response = await Alpine.store("api").fetch(
-            `http://172.17.100.14:3338/sagusay5/api/products/${product.id}/`,
+            `http://172.17.100.14:3362/edulzura1/api/products/${product.id}/`,
             {
               method: "DELETE",
               headers: { "Content-Type": "application/json" },

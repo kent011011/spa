@@ -728,7 +728,7 @@
 
       try {
         const response = await Alpine.store("api").fetch(
-          "http://172.17.100.14:3338/sagusay5/api/payments/",
+          "http://172.17.100.14:3362/edulzura1/api/payments/",
           {
             method: "POST",
             body: formData,
@@ -753,7 +753,7 @@
         for (const item of this.cartItems) {
           const updatedStock = item.stock - item.quantity;
           const stockResponse = await Alpine.store("api").fetch(
-            `http://172.17.100.14:3338/sagusay5/api/products/${item.id}/`,
+            `http://172.17.100.14:3362/edulzura1/api/products/${item.id}/`,
             {
               method: "PATCH",
               body: JSON.stringify({ stock: updatedStock }),
